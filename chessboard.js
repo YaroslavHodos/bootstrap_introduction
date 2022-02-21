@@ -34,8 +34,8 @@ function getContent() {
     return matrix.map((r, i) => `${getChessRow(r,i)}</div>`).join('');
 }
 function getChessRow(row, index) {
-    return `${getRow()}${getRowNumber(index)}${getChessCells(row, index)}
-    ${getRowNumber(index)}`
+    return `${getRow()}${getRowNumber(index+1)}${getChessCells(row, index)}
+    ${getRowNumber(index+1)}`
 }
 function getChessCells(row, index) {
     return row.map(getChessCell(index)).join('');
